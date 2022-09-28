@@ -1,0 +1,56 @@
+#header-menu-hamburger {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+}
+.visible {
+    width: auto;
+    height: auto;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+.hidden {
+    display: none
+}
+
+#body-menu-hamburger-visible {
+    width: 20%;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #44027E;
+    list-style: none;
+}
+
+#body-menu-hamburger-visible li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#body-menu-hamburger-visible li ul {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#body-menu-hamburger-hidden {
+    display: none;
+}
+
+#body-menu-hamburger-hidden li {
+    display: none;
+}
+
+#body-menu-hamburger-hidden li ul {
+    display: none;
+}

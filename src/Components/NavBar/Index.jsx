@@ -1,9 +1,11 @@
-import { FiMenu, FiFigma } from 'react-icons/fi'
-import { FaDiscord, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa'
-import ButtonIcon from '../ButtonIcon/index'
+import { FiMenu } from 'react-icons/fi'
+import ButtonsIcon from '../ButtonsIcon/index'
 import './index.css'
 
 const NavBar = () => {
+
+    const Buttons = ButtonsIcon("white", 20)
+
     return(
         <nav id='nav-bar'>
             <div id='nav-container-primary'>
@@ -12,11 +14,11 @@ const NavBar = () => {
             </div>
             <div id='nav-container-secundary'>
                 <div id='container-secundary-row-icons' >
-                    <FaDiscord size={20} color='white'/>
-                    <FaInstagram size={20} color='white'/>
-                    <FaLinkedinIn size={20} color='white'/>
-                    <FiFigma size={20} color='white'/>
-                    <FaGithub size={20} color='white'/>
+                    <Buttons.Discord/>
+                    <Buttons.Instagram/>
+                    <Buttons.LinkedinIn/>
+                    <Buttons.Figma/>
+                    <Buttons.GitHub/>
                 </div>
             </div>
         </nav>
