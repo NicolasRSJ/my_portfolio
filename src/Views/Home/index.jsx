@@ -4,9 +4,9 @@ import './index.css'
 
 const Home = () => {
     return(
-        <div>
-            <NavBar/>
-        </div>
+        <React.Fragment>
+            <h1 className='typing-demo'>Hello World;</h1>
+        </React.Fragment>
     )
 }
 
