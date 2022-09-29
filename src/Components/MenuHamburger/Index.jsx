@@ -1,48 +1,50 @@
-import React, {useState, useEffect} from 'react'
-import { FiMenu } from 'react-icons/fi'
-import { GrClose } from 'react-icons/gr' 
+import React from 'react'
+import {AiFillHome, AiFillFilePpt} from 'react-icons/ai'
+import {FaUserTie} from 'react-icons/fa'
+import {BsFillFileEarmarkPersonFill} from 'react-icons/bs'
+import {CgMoreR} from 'react-icons/cg' 
 import "./index.css"
 
 const MenuHamburger = () => {
-
-    const [open, setOpen] = useState(false)
-    const [buttonOne, setButtonOne] = useState('visible')
-    const [buttonTwo, setButtonTwo] = useState('hidden')
-    const [bodyMenu, setBodyMenu] = useState('body-menu-hamburger-hidden')
-
-    const setValues = () => {
-        if(open === false){
-            setOpen(true)
-            setButtonOne('hidden')
-            setButtonTwo('visible')
-            setBodyMenu('body-menu-hamburger-visible')
-        }else if(open === true){
-            setOpen(false)
-            setButtonOne('visible')
-            setButtonTwo('hidden')
-            setBodyMenu('body-menu-hamburger-hidden')
-        }
-    }
     return(
         <React.Fragment>
-            <div id='header-menu-hamburger'>
-                <button onClick={() => setValues()} className={buttonOne} >
-                    <FiMenu size={20} color="white"/>
-                </button>
-                <button onClick={() => setValues()} className={buttonTwo}>
-                        <GrClose size={20} color="white"/>
-                </button>
-            </div>
-            <div id={bodyMenu}>
+            <input id="menu__toggle" type="checkbox" />
+            <label className="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+        
+            <ul className="menu__box">
                 <li>
-                    <ul>1</ul>
-                    <ul>2</ul>
-                    <ul>3</ul>
-                    <ul>4</ul>
-                    <ul>5</ul>
+                    <a className="menu__item" href="#">
+                        <AiFillHome color='white' size={20}/>
+                        <p>Home</p>
+                    </a>
                 </li>
-            </div>
-
+                <li>
+                    <a className="menu__item" href="#">
+                        <AiFillFilePpt color='white' size={20}/>
+                        <p>Projetos</p>
+                    </a>
+                </li>
+                <li>
+                    <a className="menu__item" href="#">
+                        <FaUserTie color='white' size={20}/>
+                        <p>Perfil</p>
+                    </a>
+                </li>
+                <li>
+                    <a className="menu__item" href="#">
+                        <BsFillFileEarmarkPersonFill color='white' size={20} />
+                        <p>Currículo</p>
+                    </a>
+                </li>
+                <li>
+                    <a className="menu__item" href="#">
+                        <CgMoreR color='white' size={20}/>
+                        <p>Sobre</p>
+                    </a>
+                </li>
+            </ul> 
         </React.Fragment>
     )
 }
