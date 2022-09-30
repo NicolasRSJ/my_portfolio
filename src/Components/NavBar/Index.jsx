@@ -8,9 +8,7 @@ const NavBar = () => {
 
     return(
         <nav id='nav-bar'>
-            <div id='nav-container-primary'>
-                <MenuHamburger/>
-            </div>
+            <MenuHamburger/>
             <div id='nav-container-secundary'>
                 <div id='container-secundary-row-icons' >
                     <Buttons.Discord/>

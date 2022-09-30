@@ -19,8 +19,8 @@
     position: fixed;
     top: 18px;
     left: 20px;
-    width: 25px;
-    height: 15px;
+    width: 1.5vw;
+    height: 10vh;
     cursor: pointer;
     z-index: 1;
   }
